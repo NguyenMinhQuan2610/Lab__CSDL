@@ -219,6 +219,51 @@
 
         <br />
         <a href="Default.aspx">Go Back</a>
+        <hr />
+        <asp:Panel ID="PanelInsert" runat="server" GroupingText="Thêm Nhân Viên Mới" CssClass="container-center" Style="width: 80%; margin: 20px auto;">
+            <table style="width: 100%; border: none;">
+                <tr>
+                    <td style="border: none;">Họ NV:</td>
+                    <td style="border: none;">
+                        <asp:TextBox ID="txtHoNV" runat="server"></asp:TextBox></td>
+                    <td style="border: none;">Tên NV:</td>
+                    <td style="border: none;">
+                        <asp:TextBox ID="txtTenNV" runat="server"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td style="border: none;">Phái:</td>
+                    <td style="border: none;">
+                        <asp:DropDownList ID="ddlPhai" runat="server">
+                            <asp:ListItem Value="True">Nam</asp:ListItem>
+                            <asp:ListItem Value="False">Nữ</asp:ListItem>
+                        </asp:DropDownList>
+                    </td>
+                    <td style="border: none;">Ngày Sinh:</td>
+                    <td style="border: none;">
+                        <asp:TextBox ID="txtNgaySinh" runat="server" TextMode="Date"></asp:TextBox></td>
+                </tr>
+                <tr>
+                    <td style="border: none;">Nơi Sinh:</td>
+                    <td style="border: none;">
+                        <asp:TextBox ID="txtNoiSinh" runat="server"></asp:TextBox></td>
+                    <td style="border: none;">Phòng Ban:</td>
+                    <td style="border: none;">
+                        <asp:DropDownList ID="ddlMaPhongMoi" runat="server" DataSourceID="dsPhong"
+                            DataTextField="TenPhong" DataValueField="MaPhong">
+                        </asp:DropDownList>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; border: none; padding-top: 15px;">
+                        <asp:Button ID="btnThem" runat="server" Text="Thêm Nhân Viên"
+                            BackColor="#28a745" ForeColor="White" Height="35px" Width="150px"
+                            OnClick="btnThem_Click" Style="border-radius: 4px; border: none; cursor: pointer;" />
+                        <br />
+                        <asp:Label ID="lblMessage" runat="server" Text="" Font-Bold="true"></asp:Label>
+                    </td>
+                </tr>
+            </table>
+        </asp:Panel>
     </form>
 </body>
 </html>
